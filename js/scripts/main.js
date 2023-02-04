@@ -15,3 +15,24 @@ var slide_hero = new Swiper(".s-slide-hero", {
         disableOnInteraction: false
     }
 });
+
+const allFilter = document.querySelectorAll('.js-nav-games li a');
+
+const tabPane = document.querySelectorAll('.tab-pane-games')
+
+allFilter.forEach((filter, index) => {
+    filter.addEventListener('click', (event) => {
+        event.preventDefault();
+        
+        allFilter.forEach(item => {
+            item.classList.remove('active');
+        })
+
+        tabPane.forEach(tab => {
+            tab.classList.remove('active');
+        })
+
+        tabPane[index].classList.add('active')
+        filter.classList.add('active');
+    });
+})
