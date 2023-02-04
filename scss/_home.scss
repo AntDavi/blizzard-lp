@@ -1,0 +1,168 @@
+.s-hero {
+    position: relative;
+    .s-slide-hero {
+        width: 100%;
+        height: 73.6rem;
+
+        .swiper-wrapper {
+            .swiper-slide {
+                padding-top: 20.7rem;
+                &.slide-01 {
+                    background: url(../assets/banner-slide-01.jpg) no-repeat center center;
+                    background-size: cover;
+                }
+                &.slide-02 {
+                    background: url(../assets/banner-slide-02.jpg) no-repeat center center;
+                    background-size: cover;
+                }
+                &.slide-03 {
+                    background: url(../assets/banner-slide-03.jpg) no-repeat center center;
+                    background-size: cover;
+                }
+    
+                .container {
+                    @include flex(row, flex-start, space-between);
+                    
+                }
+    
+                .left-content {
+                    margin-left: 20.3rem;
+                    width: 100%;
+                    max-width: 62rem;
+    
+                    h2 {
+                        font-weight: 700;
+                        font-size: 6.4rem;
+                        line-height: 110.2%;
+                        margin-bottom: 1.6rem;
+                    }
+    
+                    p {
+                        letter-spacing: -0.005em;
+                        font-size: 1.8rem;
+                        line-height: 2.7rem;
+                        margin-bottom: 3.2rem;
+                    }
+    
+                    .btn {
+                        padding: 0 3.0rem;
+                        line-height: 5.2rem;
+                    }
+                }
+    
+                .right-content {
+                    width: 100%;
+                    max-width: 29.2rem;
+                    margin-top: -5.4rem;
+    
+                    .logo {
+                        width: 100%;
+                        max-width: 28rem;
+                        height: 18rem;
+    
+                        @include flex(row, center, center);
+    
+                        margin-bottom: 8.6rem;
+                    }
+    
+                    .video {
+                        width: 100%;
+                        max-width: 28rem;
+    
+                        span {
+                            display: block;
+                            text-align: right;
+    
+                            font-weight: 600;
+                            font-size: 1.3rem;
+                            line-height: 2rem;
+                            text-transform: uppercase;
+                            margin-bottom: 1.6rem;
+                        }
+    
+                        .btn-video {
+                            width: 100%;
+                            height: 15.8rem;
+                            border-radius: 0.5rem;
+                            overflow: hidden;
+    
+                            position: relative;
+    
+                            @include flex(row, center, center);
+    
+                            .thumb {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+    
+                                object-fit: cover;
+    
+                                transition: .3s ease;
+    
+                                &.default {
+                                    opacity: 1;
+                                }
+    
+                                &.hover {
+                                    opacity: 0;
+                                }
+    
+                                &:hover {
+                                    &.default {
+                                        opacity: 0;
+                                    }
+    
+                                    &.hover {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+    
+                            .icon {
+                                width: 5.1rem;
+                                height: 5.1rem;
+    
+                                @include flex(row, center, center);
+    
+                                background: linear-gradient(136.72deg, rgba(7, 7, 10, 0.86) 19.22%, rgba(15, 16, 22, 0.5) 76.59%);
+                                backdrop-filter: blur(1.5px);
+    
+                                border-radius: 50%;
+                                position: relative;
+                                z-index: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .s-slide-thumbnail {
+        position: absolute;
+        z-index: 2;
+        top: 24.1rem;
+        left: 7%;
+        height: 32rem;
+        .swiper-wrapper {
+            .swiper-slide {
+                width: 4.8rem;
+                height: 4.8rem;
+                cursor: pointer;
+                opacity: 0.4;
+                filter: grayscale(1);
+
+                &-thumb-active {
+                    opacity: 1;
+                    filter: grayscale(0);
+                }
+
+                &.disabled {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}
