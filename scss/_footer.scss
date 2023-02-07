@@ -1,0 +1,41 @@
+footer {
+    width: 100;
+    background-color: $neutral-200;
+
+    .container {
+        @include flex(column, center, center);
+        padding: 4rem 0;
+    }
+
+    .logo {
+        margin-bottom: 7rem;
+    }
+
+    .link {
+        letter-spacing: -0.005em;
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        margin-bottom: 6.4rem;
+
+        display: flex;
+        align-items: center;
+
+        a {
+            display: flex;
+            align-items: center;
+            color: $primary-default;
+            margin-left: .8rem;
+
+            img {
+                max-width: 2rem;
+                margin-right: .4rem;
+            }
+        }
+    }
+
+    .trademark {
+        width: 100%;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+}
