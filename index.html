@@ -58,7 +58,7 @@
                 <a href="" class="btn btn-outline">
                     Criar conta
                 </a>
-                <a href="" class="btn btn-primary">
+                <a href="" class="btn btn-primary js-open-modal">
                     <img src="assets/icons/icon-perfil.svg" alt="Icone Login" title="Icone Login">
                     Logar
                 </a>
@@ -391,6 +391,49 @@
             <p class="trademark">©2023 Blizzard Entertainment, Inc. Todos os direitos reservados. <br> Todas as <b>marcas registradas</b> mencionadas são de propriedade de seus respectivos donos.</p>
         </div>
     </footer>
+
+    <section class="modal">
+        <div class="overlay"></div>
+        <div class="modal-content">
+            <img src="assets/icons/close.svg" alt="" class="close js-close-modal">
+            <img src="./assets/icons/battlenet.svg" alt="" class="logo">
+            <form action="">
+                <div class="form-group">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Senha">
+                </div>
+                <button class="btn btn-primary">
+                    Conecte-se
+                </button>
+            </form>
+            <div class="others-conect">
+                <p>ou conecte-se com</p>
+                <ul>
+                    <li>
+                        <button>
+                            <img src="./assets/icons/google.svg" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <img src="./assets/icons/apple.svg" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <img src="./assets/icons/facebook.svg" alt="">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="message-user">
+                <p><a href="">Crie uma conta</a> Battle.net de graça</p>
+                <a href="">Não consegue logar? </a>
+            </div>
+        </div>
+    </section>
 
     <script src="./js/libs.js"></script>
     <script src="./js/script.js"></script>
