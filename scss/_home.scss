@@ -153,7 +153,7 @@
 
         .swiper-wrapper {
             .swiper-slide {
-                width: 4.8rem;
+                max-width: 4.8rem;
                 height: 4.8rem;
                 cursor: pointer;
                 opacity: 0.4;
@@ -168,6 +168,111 @@
                     pointer-events: none;
                 }
             }
+        }
+    }
+
+    @include responsive(1200px) {
+        .s-slide-thumbnail {
+            left: 1%;
+        }
+    }
+
+    @include responsive(991px) {
+        .s-slide-hero {
+            .swiper-wrapper {
+                .swiper-slide {
+                    &.slide-02 {
+                        .left-content {
+                            max-width: 46.2rem;
+                            h2 {
+                                font-size: 5.8rem;
+                            }
+                        }
+                    }
+                    .left-content {
+                        margin-left: 0;
+
+                        h2 {
+                            font-size: 6.4rem;
+                        }
+                    }
+                    .right-content {
+                        position: absolute;
+                        right: 0;
+
+                        .logo {
+                            margin-top: -5.3rem;margin-bottom: 21rem;
+
+                        }
+                    }
+                }
+            }
+        }
+        .s-slide-thumbnail {
+            left: 15px;
+            top: initial;
+            bottom: 5rem;
+            height: 4.8rem;
+
+        }
+    }
+
+    @include responsive(780px) {
+        .right-content {
+            display: none;
+        }
+    }
+
+    @include responsive(560px) {
+        .s-slide-hero {
+            height: 70rem;
+            .swiper-wrapper {
+                .swiper-slide {
+                    padding-top: 13.1rem;
+
+                    &.slide-01 {
+                        background-position-x: 35%;
+                    }
+                    
+                    &.slide-02 {
+                        background-position-x: 60%;
+                        .left-content {
+                            h2 {
+                                font-size: 4rem;
+                            }
+                            p {
+                                max-width: 30.5rem;
+                                font-size: 1.6rem;
+                            }
+                        }
+                    }
+                    &.slide-03 {
+                        background-position-x: 60%;
+                        .left-content {
+                            h2 {
+                                max-width: 33rem;
+                                
+                            }
+                            p {
+                                max-width: 26rem;
+                            }
+                        }
+                    }
+
+                    .left-content {
+                        h2 {
+                            font-size: 4rem;
+                        }
+                    }
+
+                    .right-content {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .s-slide-thumbnail{
+            bottom: 6.5rem;
         }
     }
 }
@@ -261,26 +366,49 @@
                 animation: fadeUp .4s forwards;
             }
 
-            .card-all-games {
-                width: 100%;
-                max-width: 28rem;
-                height: 38.4rem;
-                border: 1px solid $neutral-500;
+            
+        }
+    }
 
-                @include flex(column, center, center);
-
+    @include responsive (991px) {
+        .s-game-top {
+            .left-top {
                 span {
-                    display: flex;
-                    align-items: center;
-                    margin-top: 3.4rem;
+                    display: none;
+                }
+            }
+        }
+        .s-tab-game-content {
+            .tab-pane-games {
+                &.active {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+    }
 
-                    font-weight: 600;
-                    font-size: 1.6rem;
-                    line-height: 2.4rem;
-
-                    img {
-                        margin-right: 1.2rem;
-                    }
+    @include responsive (560px) {
+        .s-game-top {
+            .right-top {
+                justify-content: flex-end;
+                ul {
+                    display: none;
+                }
+                .btn-all-games {
+                    font-size: 1.4rem;
+                }
+            }
+            .left-top {
+                h2 {
+                    font-size: 2.8rem;
+                }
+            }
+        }
+        .s-tab-game-content {
+            .tab-pane-games {
+                &.active {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 2.4rem 1.6rem;
                 }
             }
         }

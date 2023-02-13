@@ -3,6 +3,15 @@ var slide_thumbnail = new Swiper(".s-slide-thumbnail", {
     direction: 'vertical',
     spaceBetween: 20,
     watchSlidesProgress: true,
+    breakpoints: {
+        320: {
+            direction: 'horizontal',
+            spaceBetween: 10
+        },
+        990: {
+            direction: 'vertical',
+        }
+    }
 });
 
 var slide_hero = new Swiper(".s-slide-hero", {
@@ -76,6 +85,4 @@ btnMenu.forEach((btn, index) => {
         btn.classList.add('active');
         menuSite[index].classList.add('active')
     })
-
-
 })

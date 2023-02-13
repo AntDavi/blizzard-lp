@@ -75,4 +75,60 @@
             }
         }
     }
+
+    @include responsive(1200px) {
+        .game-card-image {
+            height: 32rem;
+        }
+    }
+    @include responsive(991px) {
+        .game-card-image {
+            height: 30rem;
+        }
+    }
+
+    @include responsive(650px) {
+        .game-card-image {
+            height: 100%;
+            margin-bottom: 0;
+        }
+        .game-card-info {
+            display: none;
+        }
+    }
+}
+
+.card-all-games {
+    width: 100%;
+    max-width: 28rem;
+    height: 38.4rem;
+    border: 1px solid $neutral-500;
+
+    @include flex(column, center, center);
+
+    span {
+        display: flex;
+        align-items: center;
+        margin-top: 3.4rem;
+
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+
+        img {
+            margin-right: 1.2rem;
+        }
+    }
+
+    @include responsive(650px) {
+        height: 100%;
+
+        img {
+            max-width: 6.9rem;
+        }
+
+        span {
+            margin-top: 1.5rem;
+        }
+    }
 }
