@@ -8,20 +8,21 @@
         .swiper-wrapper {
             .swiper-slide {
                 padding-top: 20.7rem;
+                background-size: cover !important;
 
                 &.slide-01 {
                     background: url(../assets/banner-slide-01.jpg) no-repeat center center;
-                    background-size: cover;
+                    
                 }
 
                 &.slide-02 {
                     background: url(../assets/banner-slide-02.jpg) no-repeat center center;
-                    background-size: cover;
+                    
                 }
 
                 &.slide-03 {
                     background: url(../assets/banner-slide-03.jpg) no-repeat center center;
-                    background-size: cover;
+                    
                 }
 
                 .container {
@@ -166,6 +167,53 @@
 
                 &.disabled {
                     pointer-events: none;
+                }
+            }
+        }
+    }
+
+    .swiper-progress-bar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: block;
+        z-index: 3;
+
+        .slide-progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            width: auto;
+            opacity: 0;
+            display: block;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $primary-default;
+                height: 100%;
+                width: 0;
+                transition: .1s linear;
+            }
+
+        }
+
+        &.active {
+            .slide-progress-bar {
+                opacity: 1;
+            }
+        }
+
+        &.animate {
+            .slide-progress-bar {
+                &::after {
+                    width: 100%;
+                    transition: 5s linear;
                 }
             }
         }
@@ -527,6 +575,48 @@
             right: 5.3rem;
             bottom: -2.8rem;
             animation: float 6s ease-in-out infinite;
+        }
+    }
+
+    @include responsive (991px) {
+        .s-download-left {
+            max-width: 30rem;
+
+            h2 {
+                font-size: 3.2rem;
+                margin-bottom: 3rem;
+            }
+        }
+
+        .s-download-right {
+            right: -35rem;
+        }
+    }
+
+    @include responsive (560px) {
+        height: auto;
+        padding-bottom: 5rem;
+
+        .s-download-left {
+            padding-top: 6.3rem;
+            margin-bottom: 4rem;
+
+            h2 {
+                font-size: 2.8rem;
+            }
+        }
+
+        .s-download-right {
+            position: relative;
+            top: 0;
+            right: 0;
+            height: 27rem;
+
+            .img-sm {
+                right: 0;
+                max-width: 28rem;
+                bottom: 0;
+            }
         }
     }
 }

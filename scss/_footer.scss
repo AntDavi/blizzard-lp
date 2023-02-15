@@ -38,4 +38,10 @@ footer {
         text-align: center;
         font-size: 1.1rem;
     }
+
+    @include responsive (540px) {
+        .link {
+            flex-direction: column;
+        }
+    }
 }
